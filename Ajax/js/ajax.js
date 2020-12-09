@@ -1,3 +1,8 @@
+
+
+
+
+
 /*     Curso JavaScript: 106. AJAX: Objeto XMLHttpRequest - #jonmircha   */
 
 (() => {

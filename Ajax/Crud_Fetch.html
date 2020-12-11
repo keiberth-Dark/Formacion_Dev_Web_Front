@@ -8,14 +8,14 @@
 </head>
 
 <body>
-  <h1>CRUD API REST Fetch</H1>
+  <h1>CRUD API REST FETCH</h1>
   <section class="crud">
     <article>
-      <h2 class="crud-title">Agregar santos</h2>
+      <h2 class="crud-title">Agregar Santo</h2>
       <form class="crud-form">
         <input type="text" name="nombre" placeholder="Nombre" required>
         <br>
-        <input type="text" name="constelacion" placeholder="Constelacion" required>
+        <input type="text" name="constelacion" placeholder="Constelación" required>
         <br>
         <input type="submit" value="Enviar">
         <input type="hidden" name="id">
@@ -23,12 +23,12 @@
       </form>
     </article>
     <article>
-      <h2>Ver saltos</h2>
+      <h2>Ver Santos</h2>
       <table class="crud-table">
         <thead>
           <tr>
             <th>Nombre</th>
-            <th>Constelacion</th>
+            <th>Constelación</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -36,16 +36,15 @@
       </table>
     </article>
   </section>
-
   <template id="crud-template">
     <tr>
       <td class="name"></td>
-      <td class="Constellation"></td>
+      <td class="constellation"></td>
       <td>
         <button class="edit">Editar</button>
         <button class="delete">Eliminar</button>
       </td>
-  </tr>
+    </tr>
   </template>
 
   <script>
@@ -67,8 +66,6 @@
         if (!res.ok) throw { status: res.status, statusText: res.statusText };
 
         console.log(json);
-        console.log(res);
-
         json.forEach(el => {
           $template.querySelector(".name").textContent = el.nombre;
           $template.querySelector(".constellation").textContent = el.constelacion;
@@ -80,9 +77,8 @@
           let $clone = d.importNode($template, true);
           $fragment.appendChild($clone);
         });
+
         $table.querySelector("tbody").appendChild($fragment);
-
-
       } catch (err) {
         let message = err.statusText || "Ocurrió un error";
         $table.insertAdjacentHTML("afterend", `<p><b>Error ${err.status}: ${message}</b></p>`);
@@ -91,11 +87,10 @@
 
 
     d.addEventListener("DOMContentLoaded", getAll);
-
-
           
     /* **********     Curso JavaScript: 118. APIs REST: CRUD con Fetch (2/2) - #jonmircha     ********** */
 
+    
 
     
   </script>

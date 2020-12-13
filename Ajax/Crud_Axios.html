@@ -15,7 +15,7 @@
       <form class="crud-form">
         <input type="text" name="Nombre" placeholder="Nombre" required>
         <br>
-        <input type="text" name="Constelacion" placeholder="Constelacion" required>
+        <input type="text" name="constelacion" placeholder="Constelacion" required>
         <br>
         <input type="submit" value="Enviar">
         <input type="hidden" name="id">
@@ -40,17 +40,17 @@
   <template id="crud-template">
     <tr>
       <td class="name"></td>
-      <td class="Constellation"></td>
+      <td class="constellation"></td>
       <td>
         <button class="edit">Editar</button>
         <button class="delete">Eliminar</button>
       </td>
   </tr>
   </template>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    
   <script>
-    /* **********     Curso JavaScript: 115. APIs REST: CRUD con AJAX (1/2) - #jonmircha     ********** */
-    /* **********     Curso JavaScript: 116. APIs REST: CRUD con AJAX (2/2) - #jonmircha     ********** */
     
     const d = document,
           $table = d.querySelector(".crud-table"),
@@ -58,9 +58,36 @@
           $title = d.querySelector(".crud-title"),
           $template = d.getElementById("crud-template").content,
           $fragment = d.createDocumentFragment();
+    /* **********     Curso JavaScript: 119. APIs REST: CRUD con AXIOS (1/2) - #jonmircha     ********** */
+    
+    const getAll = async () => {
+      try {
+        let res = await axios.get("http://localhost:5800/santos"),
+        json = await res.data;
+        console.log(json);
+        json.forEach(el => {
+          $template.querySelector(".name").textContent = el.nombre;
+          $template.querySelector(".constellation").textContent = el.constelacion;
+          $template.querySelector(".edit").dataset.id = el.id;
+          $template.querySelector(".edit").dataset.name = el.nombre;
+          $template.querySelector(".edit").dataset.constellation = el.constelacion;
+          $template.querySelector(".delete").dataset.id = el.id;
 
+          let $clone = d.importNode($template, true);
+          $fragment.appendChild($clone);
+        });
 
+        $table.querySelector("tbody").appendChild($fragment);
 
+      } catch (err) {
+        let message = err.statusText || "Ocurrio un error";
+        $table.insertAdjacentHTML("afterend",`<p><b>Error: ${err.status}:${message}</b></p>`);
+      }
+    }
+
+    d.addEventListener("DOMContentLoaded", getAll);
+
+    /* **********     Curso JavaScript: 1120. APIs REST: CRUD con AXIOS (2/2) - #jonmircha     ********** */
     
   </script>
 </body>

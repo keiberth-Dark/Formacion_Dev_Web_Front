@@ -2,7 +2,7 @@
 //echo "Hola, respuesta desde el servidor";
 //var_dump($_FILES);
 
-if(isset($_FILES["file"])) {
+/* if(isset($_FILES["file"])) {
   $name = $_FILES["file"]["name"];
   $file = $_FILES["file"]["tmp_name"];
   $error = $_FILES["file"]["error"];
@@ -26,4 +26,4 @@ if(isset($_FILES["file"])) {
   }
 
   echo json_encode($res);
-}
+} */

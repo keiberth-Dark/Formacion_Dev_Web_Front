@@ -32,7 +32,7 @@
     /* ********** Curso JavaScript: 134. Ejercicios AJAX - APIs: Paginación de Pokémons con Fetch (1/2) - #jonmircha ********** */
     const d = document,
       $main = d.querySelector("main"),
-      $links = d.querySelector("links"),
+      $links = d.querySelector(".links"),
       pokeAPI = "https://pokeapi.co/api/v2/pokemon/"
 
 
@@ -56,7 +56,7 @@
             let res = await fetch(json.results[i].url),
                 pokemon = await res.json();
 
-                console.log(pokemon);
+               // console.log(pokemon);
             if (!res.ok) throw {status: res.status, statusText: res.statusText}
             $template += `
             <figure>
@@ -78,7 +78,10 @@
         }
 
         $main.innerHTML = $template;
+        $prevLink = json.previous ? `<a href="${json.previous}">/<</a>`:"";
+        $nextLink = json.next ? `<a href="${json.next}">>/</a>`:"";
 
+        $links.innerHTML = $prevLink + " " + $nextLink;
 
 
 
@@ -92,8 +95,16 @@
 
     d.addEventListener("DOMContentLoaded", e => loadPokemons(pokeAPI));
 
+    d.addEventListener("click", e => {
+      if (e.target.matches(".links a")) {
+        e.preventDefault();
+        loadPokemons(e.target.getAttribute("href"));
+      }
+    });
+
     /* ********** Curso JavaScript: 135. Ejercicios AJAX - APIs: Paginación de Pokémons con Fetch (2/2) - #jonmircha ********** */
   </script>
 </body>
+
 
 </html>

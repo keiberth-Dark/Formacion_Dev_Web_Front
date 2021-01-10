@@ -101,7 +101,7 @@
   <h1>WordPress REST API</h1>
   <article id="site" class="site"></article>
   <section id="posts" class="posts"></section>
-  <img class="loader" src="../assets/loader.svg" alt="Cargando...">
+  <img class="loader" src="assets/loader.svg" alt="Cargando...">
   <template id="post-template">
     <article class="post">
       <img class="post-image">
@@ -123,6 +123,39 @@
   </template>
   <script>
     /* ********** Curso JavaScript: 139. WordPress REST API y Fetch (1 / 5) - #jonmircha ********** */
+    fetch("https://www.redvirtual.bid/wp-json/wp/v2/users")
+    .then(res => res.ok ? res.json() : Promise.reject(res))
+    .then(json => {
+      console.log(json)
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* ********** Curso JavaScript: 140. WordPress REST API y Fetch (2 / 5) - #jonmircha ********** */
     /* ********** Curso JavaScript: 141. WordPress REST API y Fetch (3 / 5) - #jonmircha ********** */
     /* ********** Curso JavaScript: 142. WordPress REST API y Fetch (4 / 5) - #jonmircha ********** */

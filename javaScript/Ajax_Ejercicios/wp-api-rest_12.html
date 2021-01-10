@@ -122,41 +122,102 @@
     <hr>
   </template>
   <script>
+    const d = document,
+    $site = d.getElementById("site"),
+    $posts = d.getElementById("posts"),
+    $loader = d.querySelector(".loader"),
+    $template = d.getElementById("post-template").content,
+    $fragment = d.createDocumentFragment(),
+    Domain_ = "https://www.redvirtual.bid",
+    Site_ = `${Domain_}/wp-json`,
+    API_WP = `${Site_}/wp/v2`,
+    Post_ = `${API_WP}/posts`,
+    Pages_ = `${API_WP}/Pages`,
+    Categories_ = `${API_WP}/Categories`,
+    Users_ = `${API_WP}/Users`;
+
     /* ********** Curso JavaScript: 139. WordPress REST API y Fetch (1 / 5) - #jonmircha ********** */
-    fetch("https://www.redvirtual.bid/wp-json/wp/v2/users")
+    /* fetch("https://www.redvirtual.bid/wp-json/wp/v2/users")
     .then(res => res.ok ? res.json() : Promise.reject(res))
     .then(json => {
       console.log(json)
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }); */
     /* ********** Curso JavaScript: 140. WordPress REST API y Fetch (2 / 5) - #jonmircha ********** */
+
+
+    function getSiteData(){
+      fetch(Site_)
+      .then(res => res.ok ? res.json() : Promise.reject(res))
+      .then(json => {
+        console.log(json);
+        $site.innerHTML = `
+        <h3>Sitio Web</h3>
+        <h2>
+          <a href="${json.url}" target="_blank">${json.name}</a>
+        </h2>
+        <p>${json.description}</p>
+        <p>${json.timezone_string}</p>
+        `
+      })
+      .catch(err => {
+        console.log(err);
+        let message = xhr.statusText || "ocurrio un error";
+          $site.innerHTML = `<p>Error ${err.status}: ${message}</p>`
+      })
+    }
+
+    function getPosts(){
+      fetch(Post_)
+      .then(res => res.ok ? res.json() : Promise.reject(res))
+      .then(json => {
+        console.log(json)
+      })
+      .catch(err => {
+        console.log(err);
+        let message = xhr.statusText || "ocurrio un error";
+          $posts.innerHTML = `<p>Error ${err.status}: ${message}</p>`
+          $loader.style.display = "none"
+      })
+    }
+
+    d.addEventListener("DOMContentLoaded", e => {
+      getPosts();
+      getSiteData();
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* ********** Curso JavaScript: 141. WordPress REST API y Fetch (3 / 5) - #jonmircha ********** */
     /* ********** Curso JavaScript: 142. WordPress REST API y Fetch (4 / 5) - #jonmircha ********** */
     /* ********** Curso JavaScript: 143. WordPress REST API & Infinite Scroll (5 / 5) - #jonmircha ********** */

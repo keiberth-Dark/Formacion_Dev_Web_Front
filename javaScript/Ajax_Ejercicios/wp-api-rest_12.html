@@ -78,7 +78,15 @@
     .post-content summary {
       font-size: 1.5rem;
       font-weight: bold;
+      cursor: pointer;
+      color: #01579b;
     }
+
+    .post-content summary:hover {
+      opacity: .50;
+      transition: .8s;
+    }
+
 
     .post-content>article {
       padding: 1rem;
@@ -123,6 +131,7 @@
   </template>
   <script>
     const d = document,
+    w = window,
     $site = d.getElementById("site"),
     $posts = d.getElementById("posts"),
     $loader = d.querySelector(".loader"),
@@ -131,10 +140,13 @@
     Domain_ = "https://www.redvirtual.bid",
     Site_ = `${Domain_}/wp-json`,
     API_WP = `${Site_}/wp/v2`,
-    Post_ = `${API_WP}/posts?_embed`,
+    Post_ = `${API_WP}/posts?_embed&per_page=10`,
     Pages_ = `${API_WP}/Pages`,
     Categories_ = `${API_WP}/Categories`,
     Users_ = `${API_WP}/Users`;
+
+    let page = 1,
+        per_Page = 10;
 
     /* ********** Curso JavaScript: 139. WordPress REST API y Fetch (1 / 5) - #jonmircha ********** */
     /* fetch("https://www.redvirtual.bid/wp-json/wp/v2/users")
@@ -168,7 +180,7 @@
 
     function getPosts(){
       $loader.style.display = "block";
-      fetch(Post_)
+      fetch(`${Post_}5&page=${page}&per_page=${per_Page}`)
       .then(res => res.ok ? res.json() : Promise.reject(res))
       .then(json => {
         console.log(json);
@@ -182,7 +194,10 @@
 
 
 
-          $template.querySelector(".post-image").src = el._embedded["wp:featuredmedia"][0].source_url;
+          $template.querySelector(".post-image").src = el._embedded["wp:featuredmedia"] ?
+          el._embedded["wp:featuredmedia"][0].source_url : "";
+
+
           $template.querySelector(".post-image").alt = el.title.rendered;
           $template.querySelector(".post-title").innerHTML = el.title.rendered;
           $template.querySelector(".post-author").innerHTML = `
@@ -206,9 +221,6 @@
           $template.querySelector(".post-content > article").innerHTML = el.content.rendered;
 
 
-
-
-
           let $clone = d.importNode($template, true);
           $fragment.appendChild($clone);
         });
@@ -226,8 +238,22 @@
     d.addEventListener("DOMContentLoaded", e => {
       getPosts();
       getSiteData();
-    })
+    });
 
+
+
+w.addEventListener("scroll", e =>{
+  const {scrollTop,clientHeight,scrollHeight} = d.documentElement;
+
+  console.log(scrollTop,clientHeight,scrollHeight);
+
+
+  if (scrollTop + clientHeight >= scrollHeight) {
+    console.log("Cargar mas posts");
+    page++;
+    getPosts();
+  }
+});
 
 
 

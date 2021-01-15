@@ -13,7 +13,7 @@ html{
 
 body{
   margin: 0;
-  overflow: hidden;
+  /* overflow: auto; */
 }
 
 a{
@@ -48,6 +48,21 @@ img{
   text-align: center;
 }
 
+.form-search input{
+  display: block;
+  margin: auto;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.grid-fluid{
+  margin: 1rem auto;
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, mimmax(280px, 1fr));
+}
+
 .header{
   padding: 0.5rem;
   position: sticky;
@@ -60,17 +75,25 @@ img{
   margin: 1rem auto;
 }
 
-.form-search input{
-  display: block;
-  margin: auto;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-}
-
 .loader{
   margin: 1rem auto;
   display: block;
   width: 4rem;
   height: 4rem;
 }
+
+.post-card{
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 80%;
+  background-color: rgb(209, 212, 212);
+}
+
+.post-card p{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .post-card img{
+
+} */

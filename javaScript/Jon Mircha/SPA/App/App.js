@@ -1,5 +1,5 @@
 import { Header } from "./Components/Header.js";
-import { Posts } from "./Components/Posts.js";
+import { Main } from "./Components/Main.js";
 import { Loader } from "./Components/Loader.js";
 import { Router } from "./Components/Router.js";
 
@@ -23,8 +23,9 @@ export function App() {
   }); */
   const $root = document.getElementById("root");
 
+  $root.innerHTML = null;
   $root.appendChild(Header());
-  $root.appendChild(Posts());
+  $root.appendChild(Main());
   $root.appendChild(Loader());
 
   Router();

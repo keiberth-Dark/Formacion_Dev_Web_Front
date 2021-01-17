@@ -6,6 +6,8 @@ export function Menu(){
     <span>-</span>
     <a href="#/Search">Busquedad</a>
     <span>-</span>
+    <a href="#/Contacto">Contacto</a>
+    <span>-</span>
     <a href="https://aprendejavascript.org" target="_blank" rel=""noopener>Aprende Js</a>
 
 

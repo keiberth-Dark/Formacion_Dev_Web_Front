@@ -161,7 +161,7 @@
       fetch(Site_)
       .then(res => res.ok ? res.json() : Promise.reject(res))
       .then(json => {
-        console.log(json);
+        //console.log(json);
         $site.innerHTML = `
         <h3>Sitio Web</h3>
         <h2>
@@ -183,7 +183,7 @@
       fetch(`${Post_}5&page=${page}&per_page=${per_Page}`)
       .then(res => res.ok ? res.json() : Promise.reject(res))
       .then(json => {
-        console.log(json);
+        //console.log(json);
 
         json.forEach(el => {
           let categories = "";
@@ -245,7 +245,7 @@
 w.addEventListener("scroll", e =>{
   const {scrollTop,clientHeight,scrollHeight} = d.documentElement;
 
-  console.log(scrollTop,clientHeight,scrollHeight);
+  //console.log(scrollTop,clientHeight,scrollHeight);
 
 
   if (scrollTop + clientHeight >= scrollHeight) {

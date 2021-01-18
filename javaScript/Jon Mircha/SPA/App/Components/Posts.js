@@ -6,7 +6,7 @@ export function Post(props){
 
   return ` 
     <section class="post-page">
-    <aside>
+    <aside></aside>
       <h2>${title.rendered}</h2>
       <time datetime="${date}">${dateFormat}</time>
     </aside>

@@ -26,11 +26,20 @@ export async function Router(){
         $main.innerHTML = html;
       },
     }); 
-    console.log(api.POST);
+    //console.log(api.POST);
 
 
   }else if(hash.includes("#/search")){
-    $main.innerHTML = "<h2>Seccion del Buscador</h2>";
+    let query = localStorage.getItem("wpSearch");
+
+    if (!query) return false;
+    
+    await ajax({
+      url: `${api.SEARCH}${query}`,
+      cbSuccess: (search) => {
+        console.log(search)
+      }
+    })
 
   }else if(hash === "#/Contacto"){
     $main.innerHTML = "<h2>Seccion de Contanto</h2>";

@@ -2,6 +2,7 @@ import { Header } from "./Components/Header.js";
 import { Main } from "./Components/Main.js";
 import { Loader } from "./Components/Loader.js";
 import { Router } from "./Components/Router.js";
+import { infiniteScroll } from "./Helpers/infinite_scroll.js";
 
 export function App() {
   /* document.getElementById("root").innerHTML = `<h1>Bienvenidos a SPA con Vanilla-Js</h1>`
@@ -29,5 +30,6 @@ export function App() {
   $root.appendChild(Loader());
 
   Router();
+  infiniteScroll();
   
 }

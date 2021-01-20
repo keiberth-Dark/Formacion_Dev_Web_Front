@@ -2,6 +2,7 @@
 
 - HTML5
 - CSS3
+- SVG
 - Bootstrap
 - Figma
 - Markdown 

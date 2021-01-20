@@ -1,5 +1,6 @@
 import { ajax } from "../Helpers/ajax.js";
 import api from "../Helpers/wp_api.js";
+import { ContactForm } from "./ContactForm.js";
 import { PostCard } from "./PostCard.js";
 import { Post } from "./Posts.js";
 import { SearchCard } from "./SearchCard.js";
@@ -53,8 +54,9 @@ export async function Router() {
         $main.innerHTML = html;
       },
     });
-  } else if (hash === "#/Contacto") {
-    $main.innerHTML = "<h2>Seccion de Contanto</h2>";
+  } else if (hash === "#/contacto") {
+    $main.appendChild(ContactForm());
+
   } else {
     await ajax({
       url: `${api.POST}/${localStorage.getItem("wpPostid")}`,

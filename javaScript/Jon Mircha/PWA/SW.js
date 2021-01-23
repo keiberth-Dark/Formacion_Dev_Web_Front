@@ -20,7 +20,7 @@
 
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
-self.addEventListener('install', e => {
+self.addEventListener('install', e => { 
   e.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {

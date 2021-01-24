@@ -1,0 +1,38 @@
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+
+  <defs>
+    <style>
+      .lines{
+        fill: none;
+        stroke: red;}
+    </style>
+
+  </defs>
+    <g>
+      <polygon points="10 80, 25 50, 40 80," fill="#8b1717" />
+      <polygon points="20 160, 50 100, 80 160," fill="cyan" fill-opacity="0.3" />
+      <polygon points="5 40, 12.5 25, 20 40," fill="cyan"  />
+      <polygon points="60 80, 45 85, 100 150," fill="none" stroke="#2020e0"  />
+    </g>
+
+  <g>
+    <polyline points="50 60, 80 30, 50 40 " style=""/>
+    <polyline class="lines" points="80 160, 182 164, 132 140 " />
+  </g>
+
+
+  <g>
+    <circle cx="100" cy="100" r="50" 
+    fill="none"
+    stroke="red"
+    stroke-width="30"
+    stroke-opacity="0.5"
+    stroke-dasharray="10 15"
+    />
+  </g>
+
+</svg>

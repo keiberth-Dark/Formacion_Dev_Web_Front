@@ -1,0 +1,20 @@
+
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+
+  <g>
+  <rect x="5" y="10" width="190" height="175" fill="none" stroke="aqua"/>
+  <rect x="25" y="25" width="150" height="150" fill="none" stroke="red"/>
+  <rect x="40" y="40" width="120" height="120" fill="none" stroke="darkcyan"/>
+  </g>
+
+  <g>
+  <ellipse cx="100" cy="100" rx="30" ry="60" stroke="blanchedalmond"/>
+  <ellipse cx="100" cy="100" rx="60" ry="30" stroke="cornflowerblue"/>
+  
+  </g>
+
+</svg>

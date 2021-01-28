@@ -1,0 +1,15 @@
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+
+  <!-- <path d="M 1 1 L 10 5 L 3 17 Z"
+    fill="none" stroke="red" stroke-width="" />  
+ -->
+    <path d="M 1 1 h 18 v 18 h -18 z"          
+    fill="none" stroke="black" stroke-width="" />    
+
+    <path d="M 1 1 l 18 0 l -9 18 z"          
+    fill="none" stroke="red" stroke-width="" />      
+
+</svg>

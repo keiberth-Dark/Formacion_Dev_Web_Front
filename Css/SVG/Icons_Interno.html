@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>SVG Icons</title>
+
+    <style>
+      /* svg {
+        border: solid 1px black;
+        width: 800px;
+        margin: 20em auto;
+        display: block;
+        background: yellow;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <svg viewBox="0 0 100 100" , width="0" height="0">
+      <symbol id="circle">
+        <circle cx="50" cy="50" r="50" />
+      </symbol>
+
+      <symbol id="dimond">
+        <path
+          d="m 50,0 50,50 -50, 50 -50, -50 z"
+          fill=""
+          stroke=""
+          stroke-width=""
+        />
+      </symbol>
+      <!-- <use href="#circle" /> -->
+    </svg>
+
+    <svg>
+      <use href="#dimond" fill="red" />
+    </svg>
+  </body>
+</html>

@@ -12,6 +12,10 @@
         font-size: 2.5em;
       }
 
+      .contain {
+        display: flex;
+      }
+
       a {
         color: #fff;
         background-color: red;
@@ -29,7 +33,7 @@
 
       /* 2 */
 
-      .a {
+      p > a {
         background-color: red;
         color: #fff;
         text-decoration: none;
@@ -48,16 +52,18 @@
       p:hover a {
         background-color: black;
         color: yellow;
-        transform: translateY(-100%);
+        transform: translateY(80%);
         left: -500%;
       }
     </style>
   </head>
 
   <body>
-    <a href="https://ed.team">EDteam - Aprende Desde Cero</a>
+    <div class="contain">
+      <a href="https://ed.team">EDteam - Animaciones</a>
 
-    <p><a href="https://ed.team" class="a">EDteam </a></p>
+      <p><a href="https://ed.team" class="a">EDteam </a></p>
+    </div>
 
     <cite>Dejar cursor En Sima ^^</cite>
   </body>

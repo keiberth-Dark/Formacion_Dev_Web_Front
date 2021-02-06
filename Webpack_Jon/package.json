@@ -4,7 +4,10 @@
   "description": "Inicio del curso Webpack",
   "main": "src/index.js",
   "scripts": {
-    "build":"webpack"
+    "dev-foo": "webpack --mode development --entry ./foo/src/index.js --output-path ./foo/dist",
+    "build-foo": "webpack --mode production --entry ./foo/src/index.js --output-path ./foo/dist",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "keywords": [
     "Webpack__"
@@ -12,6 +15,9 @@
   "author": "Keiberth Areyan <Keiberth456@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "babel-loader": "^8.2.2",
     "webpack": "^5.21.0",
     "webpack-cli": "^4.5.0"
   }

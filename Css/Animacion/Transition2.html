@@ -16,16 +16,14 @@
         position: absolute;
         left: 0;
         top: 0;
-        transition: left .5s,
-                    top .5s .5s;
-
-        
+        transition: left 0.5s, background-color 0.5s, top 0.5s 0.5s;
       }
 
-      .animate:hover .ball{
+      .animate .ball {
+        transition: left 2s, top 2s 2s, background-color 4s;
         left: calc(100vw - 100px);
         top: calc(100vh - 100px);
-
+        background-color: green;
       }
 
       body {
@@ -33,9 +31,7 @@
         display: flex;
       }
 
-      
-
-      button{
+      button {
         margin: auto;
       }
     </style>
@@ -46,17 +42,14 @@
     <button id="button">Animar</button>
 
     <script>
-
       const d = document;
 
-      d.getElementById("button").addEventListener("click", e => {
+      d.getElementById("button").addEventListener("click", (e) => {
         d.body.classList.add("animate");
-        d.getElementById("ball").addEventListener("transitionend", e => {
-        if(e.elapsedTime === 1) d.body.classList.remove("animate");
-          
-        })
+        d.getElementById("ball").addEventListener("transitionend", (e) => {
+          if (e.elapsedTime === 4) d.body.classList.remove("animate");
+        });
       });
-
     </script>
   </body>
 </html>

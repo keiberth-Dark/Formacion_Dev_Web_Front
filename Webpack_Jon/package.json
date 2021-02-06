@@ -1,0 +1,18 @@
+{
+  "name": "webpack_jon",
+  "version": "1.0.0",
+  "description": "Inicio del curso Webpack",
+  "main": "src/index.js",
+  "scripts": {
+    "build":"webpack"
+  },
+  "keywords": [
+    "Webpack__"
+  ],
+  "author": "Keiberth Areyan <Keiberth456@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.21.0",
+    "webpack-cli": "^4.5.0"
+  }
+}

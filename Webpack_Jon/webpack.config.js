@@ -1,5 +1,3 @@
-const { Module } = require("webpack");
-
 module.exports = {
   module:{
     rules:[

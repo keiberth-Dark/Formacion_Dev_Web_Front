@@ -26,15 +26,14 @@ module.exports = {
         use: [
           {loader: MiniCssExtractPlugin.loader,
           options: {
-            publicPath:"./"
+            publicPath:"./",
           },},
           "css-loader",
         ],
-
       },
       {
         test: /\.(jpe?g|png|gif|svg|webp)$/i,
-        use: ["file-loader?name=assets/[name].[ext]"],
+        use: ["file-loader?name=assets/[name].[ext]", "image-webpack-loader"], 
       },
       {
         test: /\.(woff)$/i,

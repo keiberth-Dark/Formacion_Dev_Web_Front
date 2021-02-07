@@ -7,7 +7,6 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
@@ -16,7 +15,18 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_webpack_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/webpack.svg */ \"./src/assets/webpack.svg\");\n\n\n\nvar arr = [1, 2, 3],\n    codeESNext = function codeESNext() {\n  var _console;\n\n  return (_console = console).log.apply(_console, arr);\n};\n\nconsole.log(\"HOLA Kletus Sin configuracion Webpack\");\ncodeESNext();\ndocument.getElementById(\"app\").innerHTML = \"<img src=\\\"\".concat(_assets_webpack_svg__WEBPACK_IMPORTED_MODULE_1__.default, \"\\\" alt=\\\"Webpack\\\">\");\n\n//# sourceURL=webpack://webpack_jon/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _assets_webpack_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/webpack.svg */ \"./src/assets/webpack.svg\");\n/* harmony import */ var _assets_webpack_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_webpack_svg__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _assets_saga_kanon_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/saga-kanon.png */ \"./src/assets/saga-kanon.png\");\n/* harmony import */ var _assets_saga_kanon_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_saga_kanon_png__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nvar arr = [1, 2, 3],\n    codeESNext = function codeESNext() {\n  var _console;\n\n  return (_console = console).log.apply(_console, arr);\n},\n    d = document,\n    $app = d.getElementById(\"app\"),\n    $h1 = d.createElement(\"h1\"),\n    $logo = d.createElement(\"img\"),\n    $img = d.createElement(\"img\");\n\n$h1.textContent = \"Hola Mundo con Webpack\";\n$logo.src = (_assets_webpack_svg__WEBPACK_IMPORTED_MODULE_1___default());\n$logo.classList.add(\"icon\");\n$img.src = (_assets_saga_kanon_png__WEBPACK_IMPORTED_MODULE_2___default());\n$app.appendChild($h1);\n$app.appendChild($logo);\n$app.appendChild($img);\nconsole.log(\"HOLA Kletus Sin configuracion Webpack\");\ncodeESNext();\n/* document.getElementById(\"app\").innerHTML = `<img src=\"${logo}\" alt=\"Webpack\">`; */\n\n//# sourceURL=webpack://webpack_jon/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/assets/saga-kanon.png":
+/*!***********************************!*\
+  !*** ./src/assets/saga-kanon.png ***!
+  \***********************************/
+/***/ (() => {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/image-webpack-loader/index.js):\\nError: Cannot find module 'imagemin-pngquant'\\nRequire stack:\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\image-webpack-loader\\\\index.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\loadLoader.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\NormalModuleFactory.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\Compiler.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\webpack.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\index.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack-cli\\\\lib\\\\webpack-cli.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack-cli\\\\lib\\\\bootstrap.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack-cli\\\\bin\\\\cli.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\bin\\\\webpack.js\\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:957:15)\\n    at Function.Module._load (internal/modules/cjs/loader.js:840:27)\\n    at Module.require (internal/modules/cjs/loader.js:1019:19)\\n    at require (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\v8-compile-cache\\\\v8-compile-cache.js:159:20)\\n    at Object.module.exports (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\image-webpack-loader\\\\index.js:78:20)\");\n\n//# sourceURL=webpack://webpack_jon/./src/assets/saga-kanon.png?");
 
 /***/ }),
 
@@ -24,9 +34,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /*!********************************!*\
   !*** ./src/assets/webpack.svg ***!
   \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"assets/webpack.svg\");\n\n//# sourceURL=webpack://webpack_jon/./src/assets/webpack.svg?");
+eval("throw new Error(\"Module build failed (from ./node_modules/image-webpack-loader/index.js):\\nError: Cannot find module 'imagemin-pngquant'\\nRequire stack:\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\image-webpack-loader\\\\index.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\loadLoader.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\NormalModuleFactory.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\Compiler.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\webpack.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\index.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack-cli\\\\lib\\\\webpack-cli.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack-cli\\\\lib\\\\bootstrap.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack-cli\\\\bin\\\\cli.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\bin\\\\webpack.js\\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:957:15)\\n    at Function.Module._load (internal/modules/cjs/loader.js:840:27)\\n    at Module.require (internal/modules/cjs/loader.js:1019:19)\\n    at require (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\v8-compile-cache\\\\v8-compile-cache.js:159:20)\\n    at Object.module.exports (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\image-webpack-loader\\\\index.js:78:20)\");\n\n//# sourceURL=webpack://webpack_jon/./src/assets/webpack.svg?");
 
 /***/ }),
 
@@ -34,9 +44,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!***********************!*\
   !*** ./src/style.css ***!
   \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack_jon/./src/style.css?");
+eval("throw new Error(\"Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\\nModuleBuildError: Module build failed (from ./node_modules/image-webpack-loader/index.js):\\nError: Cannot find module 'imagemin-pngquant'\\nRequire stack:\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\image-webpack-loader\\\\index.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\loadLoader.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\NormalModuleFactory.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\Compiler.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\webpack.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\index.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack-cli\\\\lib\\\\webpack-cli.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack-cli\\\\lib\\\\bootstrap.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack-cli\\\\bin\\\\cli.js\\n- C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\bin\\\\webpack.js\\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:957:15)\\n    at Function.Module._load (internal/modules/cjs/loader.js:840:27)\\n    at Module.require (internal/modules/cjs/loader.js:1019:19)\\n    at require (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\v8-compile-cache\\\\v8-compile-cache.js:159:20)\\n    at Object.module.exports (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\image-webpack-loader\\\\index.js:78:20)\\n    at processResult (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:598:19)\\n    at C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:692:5\\n    at C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:399:11\\n    at C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:251:18\\n    at runSyncOrAsync (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:156:3)\\n    at iterateNormalLoaders (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:250:2)\\n    at Array.<anonymous> (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:223:4)\\n    at runCallbacks (C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\enhanced-resolve\\\\lib\\\\CachedInputFileSystem.js:27:15)\\n    at C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\enhanced-resolve\\\\lib\\\\CachedInputFileSystem.js:200:4\\n    at C:\\\\Users\\\\K\\\\Downloads\\\\Dev\\\\Webpack_Jon\\\\node_modules\\\\graceful-fs\\\\graceful-fs.js:123:16\");\n\n//# sourceURL=webpack://webpack_jon/./src/style.css?");
 
 /***/ })
 
@@ -66,6 +76,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -76,18 +98,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
@@ -104,26 +114,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

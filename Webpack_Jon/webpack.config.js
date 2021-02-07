@@ -22,6 +22,7 @@ module.exports = {
       },
       {
         test:/\.css$/i,
+<<<<<<< HEAD
         /* use: [MiniCssExtractPlugin.loader,"css-loader"], */
         use: [
           {loader: MiniCssExtractPlugin.loader,
@@ -30,6 +31,9 @@ module.exports = {
           },},
           "css-loader",
         ],
+=======
+        use: [MiniCssExtractPlugin.loader,"css-loader"],
+>>>>>>> parent of e063331... Manejo de URLS en CSS
       },
       {
         test: /\.(jpe?g|png|gif|svg|webp)$/i,

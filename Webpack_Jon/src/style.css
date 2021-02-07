@@ -2,17 +2,28 @@
   font-family: "Chalet";
   font-style: normal;
   font-weight: normal;
+<<<<<<< HEAD
   src: url("./assets/chalet.woff") format("woff");
+=======
+  /* src: url("./assets/chalet.woff")format("woff"); */
+>>>>>>> parent of e063331... Manejo de URLS en CSS
 }
 
 html {
   box-sizing: border-box;
+<<<<<<< HEAD
   font-family: "Chalet", sans-serif;
   font-size: 16px;
   background-color: #2b3a42;
   color: #8dd6f9;
   background-image: url("assets/batman.jpg");
   background-size: cover;
+=======
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #2b3a42;
+  color: #8dd;
+>>>>>>> parent of e063331... Manejo de URLS en CSS
 }
 
 body {

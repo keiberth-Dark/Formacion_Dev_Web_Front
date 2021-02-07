@@ -1,6 +1,1 @@
-(() => {
-  "use strict";
-  var o;
-  console.log("HOLA Kletus Sin configuracion Webpack"),
-    (o = console).log.apply(o, [1, 2, 3]);
-})();
+(()=>{"use strict";var t={};t.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(t){if("object"==typeof window)return window}}(),(()=>{var e;t.g.importScripts&&(e=t.g.location+"");var r=t.g.document;if(!e&&r&&(r.currentScript&&(e=r.currentScript.src),!e)){var c=r.getElementsByTagName("script");c.length&&(e=c[c.length-1].src)}if(!e)throw new Error("Automatic publicPath is not supported in this browser");e=e.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),t.p=e})();const e=t.p+"assets/webpack.svg";var r;console.log("HOLA Kletus Sin configuracion Webpack"),(r=console).log.apply(r,[1,2,3]),document.getElementById("app").innerHTML='<img src="'.concat(e,'" alt="Webpack">')})();

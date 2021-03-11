@@ -1,0 +1,112 @@
+[class^="bg-"] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    border: 1px solid red;
+    margin: 0% auto;
+    height: 150px;
+    text-align: center;
+}
+
+/* 
+background-color: Establece el color de fondo de la caja
+background-image:url(ruta) Establece la imagen de fondo de la caja
+background-repeat: Establece si la imagen se repite o no
+    repeat-x|repeat-y|no-repeat
+background-size: Establece el tamaño de la imagen de fondo
+    x [y]|auto|cover|contain. 
+    el valor en y es opcional, si no se lo ponemos lo calcula automáticamente
+    cover cubre la caja por completo, aunque la imagen escape del contenedor
+    contain la imagen se ajusta al contenido
+background-position: Establece la posicion de la imagen, si no se especifica un segundo valor será center
+    left top
+    left center
+    left bottom
+    right top
+    right center
+    right bottom
+    center top
+    center center
+    center bottom
+    x% y%
+    xpos ypos
+    initial
+    inherit
+
+background-clip: Establece que parte de la caja rellenará el fondo
+    Muestra la imagen desde donde le decimos, solo oculta, NO redimensiona
+    border-box|padding-box|content-box
+
+background-origin: Establece donde comienza el fondo
+    Redimensiona la imagen para que ocupe la zona que le decimos
+    border-box|padding-box|content-box
+
+background-attachment: permite establecer si el fondo se coloca respecto a la caja o al viewport
+    scroll|fixed
+*/
+
+body {
+    padding-bottom: 50em;
+    text-align: center;
+}
+
+.bg-color {
+    background-color: black;
+}
+
+.bg-image {
+  background-image: url(logo.png);
+  opacity: 0.8;
+  background-size: cover;
+}
+
+.bg-size {
+    background-image: url(logo.png);
+    background-size: cover ;
+}
+
+.bg-repeat {
+    background-image: url(logo.png);
+    background-repeat: repeat-y;
+   
+}
+
+.bg-position {
+    background-image: url(logo.png);
+    background-position: center ;
+    background-size: 20%;
+    background-repeat: no-repeat;
+
+   
+    
+}
+
+.bg-origin {
+    
+    
+
+}
+
+.bg-clip {
+    margin-top: 150px;
+    border: 10px dotted brown;
+    background-color: cadetblue;
+   background-clip: padding-box;
+ 
+}
+
+.bg-attachment {
+    margin-top: 150px;
+    width: 500px;
+    height: 800px;
+    background-image: url(cafe.jpeg);
+    background-position: center;
+    background-size: 100% ;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    
+}
+
+.bg-multiple {
+
+}

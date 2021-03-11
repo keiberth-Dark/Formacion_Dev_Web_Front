@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendiendo SVG</title>
+
+  <style>
+    
+  </style>
+</head>
+
+<body>
+
+<svg id="svgJS">
+</svg>
+  <svg id="svg" viewBox="0 0 200 200">
+    <defs>
+      <linearGradient id="grad"
+        x1="25%" y1="30%"
+        x2="10%" y2="30%"
+        spreadMethod="reflect"
+      >
+        <stop offset="0%" stop-color="red"/>
+        <stop offset="100%" stop-color="black"/>
+      </linearGradient>
+    </defs>
+
+    <rect x="30" y="40" width="60" height="50" fill="url(#grad)" />
+  </svg>
+
+
+
+  <script>
+    const svgText = (text, color1, color2) => {
+      const svg = `
+    <svg viewBox="0 0 150 200">
+    <defs>
+        <linearGradient id="gradient" 
+            x1="0%" y1="0%"
+            x2="100%" y2="100%"
+            >
+          <stop offset="0%" stop-color="${color1}"/>
+          <stop offset="100%" stop-color="${color2}"/>
+        </linearGradient>
+    </defs>
+
+    <text x=""  y="20" fill="url(#gradient)">${text}</text>
+      
+    </svg>
+    `;
+
+    document.getElementById("svgJS").innerHTML = svg;
+    }
+
+    svgText("Hola mundo", "black", "#a46fff")
+  </script>
+</body>
+
+</html>

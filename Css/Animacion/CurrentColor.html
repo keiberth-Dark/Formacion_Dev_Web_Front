@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Aprendiendo Animaciones CSS</title>
+    <style>
+      article {
+        color: red;
+        width: 50%;
+        margin: 2em auto;
+        border: 1px solid currentcolor;
+        padding: 1em;
+        -webkit-animation: color 5s infinite alternate;
+        animation: color 5s infinite alternate;
+      }
+      article .title {
+        margin: 0;
+      }
+      article a {
+        display: inline-block;
+        text-decoration: none;
+        color: currentcolor;
+        border: 1px solid currentcolor;
+        padding: 0.5em 1em;
+      }
+      
+      @keyframes color {
+        25% {
+          color: #ffbf00;
+        }
+        50% {
+          color: #80ff00;
+        }
+        75% {
+          color: #ffbf00;
+        }
+        100% {
+          color: aqua;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <article>
+      <h2 class="title">Titulo</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+        egestas feugiat dolor. Quisque eget eros quis neque egestas
+        ultricies. Aliquam porttitor metus ut egestas consequat.
+      </p>
+      <a href="#">Leer más</a>
+    </article>
+  </body>
+</html>

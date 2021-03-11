@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Aprendiendo Animaciones CSS</title>
+    <style>
+
+      p{
+        background: yellow;
+        padding: 1em;
+        transition: all 5s;
+      }
+
+      .animate>.primero{
+        text-align: right ;
+      }
+
+      span{
+        position: relative;
+        left: 0;
+        transition: all 5s ;
+      }
+
+      .animate span{
+        left: 85%;
+      }
+
+    strong{
+      display: inline-block;
+      transition: all 2.5s;
+    }
+
+    .animate p strong{
+      transform: translateX( calc(100vw - 100% - 3em));
+    }
+
+    .flex{
+      display: flex;
+      background: lime;
+      padding: 1em;
+      justify-content: space-between;
+    }
+
+    .item{
+      color: red;
+      padding: 2em 4em;
+      border: 1px solid currentColor;
+      transition: all 1s;
+    }
+
+    .item:first-child{
+      background: #fff;
+      order: 0;
+    }
+
+    .animate .item:first-child{
+      order: 5;
+    }
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <button id="animate">Animar</button>
+
+    <p class="primero">Keiberth</p>
+
+    <p><span>HOLA Keiberth</span></p>
+
+    <p><strong>Hola EDTeam</strong></p>
+
+    <div class="flex">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+
+
+
+
+    <script>
+      const d = document;
+
+      d.getElementById("animate").addEventListener("click", e => {
+        d.body.classList.toggle("animate");
+        e.target.textContent == "Animar"
+        ? e.target.textContent = "detener"
+        : e.target.textContent = "Animar";
+      });
+
+    </script>
+  </body>
+</html>

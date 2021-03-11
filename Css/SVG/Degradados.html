@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendiendo SVG</title>
+
+  <style>
+    svg {
+      width: 600px;
+      margin: 2em auto;
+      display: block;
+      border: 1px solid #000;
+      /* background: linear-gradient(transparent 29px, #999 30px) 0 0 / 600px 30px repeat-y, linear-gradient(to right, transparent 29px, #999 30px) 0 0 / 30px 600px repeat-x; */
+      /* background-image: linear-gradient(yellow, red); */
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <svg id="svg" viewBox="0 0 300 200">
+
+    <defs>
+      <linearGradient id="my-gradient">
+        <stop offset="0%" stop-color="yellow" />
+        <stop offset="100%" stop-color="red" />
+      </linearGradient>
+    </defs>
+
+    <rect x="50" y="30" width="200" height="140" fill="url(#my-gradient)" />
+
+    <text x="20" y="20" fill="url(#my-gradient)">Hola comunidad EDteam</text>
+
+
+    <!-- <path d="m 1 1 a 18 18 0 0 1 18 18"
+      fill="none" stroke="yellow" stroke-width="" /> -->
+
+  </svg>
+
+</body>
+
+</html>

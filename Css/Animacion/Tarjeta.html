@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Aprendiendo Animaciones CSS</title>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::after,
+      *::before {
+        box-sizing: inherit;
+      }
+
+      body {
+        display: flex;
+        min-height: 100vh;
+      }
+
+      .card {
+        width: 20em;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+      .card_img {
+        width: 100%;
+        display: block;
+        transition: transform 0.2s;
+      }
+      .card_content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1em;
+        height: 100%;
+        width: 100%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        z-index: 100;
+      }
+      .card_title {
+        transition: transform 0.2s;
+        transform: translate(0, -1000%);
+      }
+      .card_description {
+        transition: transform 0.2s;
+        transform: translate(0, 1000%);
+      }
+      .card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+          rgba(235, 71, 126, 0.8),
+          rgba(71, 180, 235, 0.8)
+        );
+        height: 0;
+        width: 100%;
+        padding-bottom: 100%;
+        border-radius: 50%;
+        transform: translate(-50%, 50%) scale(0.01) rotate(45deg);
+        transition: inherit;
+      }
+      .card:hover .card_title,
+      .card:hover .card_description {
+        transform: translate(0);
+        transition: transform 0.3s 0.3s;
+      }
+      .card:hover .card_img {
+        transform: scale(1.5) rotate(10deg);
+      }
+      .card:hover::after {
+        transform: scale(2.5) rotate(45deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <article class="card">
+      <img src="http://placeimg.com/400/500/any" class="card_img" alt="Imagen Random" />
+      <div class="card_content">
+        <h2 class="card_title">Vive la Moda</h2>
+        <p class="card_description">
+          Descuentos exclusivos por temporada en todos los productos
+        </p>
+      </div>
+    </article>
+  </body>
+</html>

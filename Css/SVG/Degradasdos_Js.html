@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendiendo SVG</title>
+
+  <style>
+    /* svg {
+      width: 600px;
+      margin: 2em auto;
+      display: block;
+      border: 1px solid #000;
+      /* background: linear-gradient(transparent 29px, #999 30px) 0 0 / 600px 30px repeat-y, linear-gradient(to right, transparent 29px, #999 30px) 0 0 / 30px 600px repeat-x; */
+      /* background-image: linear-gradient(yellow, red); */
+    } */
+  </style>
+</head>
+
+<body>
+
+
+  <svg id="svg" viewBox="0 0 300 200">
+
+
+
+  </svg>
+  <script>
+    const svgText = (text, color1, color2) => {
+      const svg = `
+    <svg viewBox="0 0 100 20">
+    <defs>
+        <linearGradient id="gradient">
+          <stop offset="0%" stop-color="${color1}"/>
+          <stop offset="100%" stop-color="${color2}"/>
+        </linearGradient>
+    </defs>
+    <text x=""  y="20" fill="url(#gradient)">${text}</text>
+      
+    </svg>
+    `;
+
+    document.body.innerHTML = svg;
+    }
+
+    svgText("Hola mundo", "black", "#a46fff")
+  </script>
+</body>
+
+</html>

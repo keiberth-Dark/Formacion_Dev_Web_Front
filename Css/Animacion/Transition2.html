@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Aprendiendo Animaciones CSS</title>
+    <style>
+      .ball {
+        width: 100px;
+        height: 100px;
+        background: tomato;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: left 0.5s, background-color 0.5s, top 0.5s 0.5s;
+      }
+
+      .animate .ball {
+        transition: left 2s, top 2s 2s, background-color 4s;
+        left: calc(100vw - 100px);
+        top: calc(100vh - 100px);
+        background-color: green;
+      }
+
+      body {
+        min-height: 90vh;
+        display: flex;
+      }
+
+      button {
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="ball" id="ball"></div>
+    <button id="button">Animar</button>
+
+    <script>
+      const d = document;
+
+      d.getElementById("button").addEventListener("click", (e) => {
+        d.body.classList.add("animate");
+        d.getElementById("ball").addEventListener("transitionend", (e) => {
+          if (e.elapsedTime === 4) d.body.classList.remove("animate");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Aprendiendo SVG</title>
+
+    <style>
+      svg {
+        width: 800px;
+        border: 1px solid #000;
+        margin: 3em auto;
+        display: block;
+      }
+
+      text {
+        writing-mode: tb;
+        text-orientation: upright;
+      }
+
+      p {
+        font-size: 32px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg viewBox="0 0 400 300">
+      <path
+        d="m0, 0 q300, 0 400, 300"
+        fill="none"
+        stroke="red"
+        id="path"
+      />
+      <text
+        x="20"
+        y="100"
+        font-size="32"
+        text-anchor="start"
+        font-weight="bold"
+        fill="none"
+        stroke="red"
+        stroke-width="0.3"
+      >
+        <textPath href="#path">Hola amigos</textPath>
+      </text>
+    </svg>
+  </body>
+</html>

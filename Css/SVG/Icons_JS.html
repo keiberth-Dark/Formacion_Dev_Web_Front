@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>SVG Icons</title>
+
+    <style>
+      .icon {
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+        /* Fill currentColor Toma el color de padre */
+      }
+
+      h1 {
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="icon-diamond">Iconos en SVG</h1>
+
+    <script>
+      const d = document,
+        svgIconsUrl = "Icons_Externo.svg";
+
+      const printIcons = (url, iconName, element) => {
+        const svgElement = d.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "svg"
+          ),
+          svgIcon = d.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "use"
+          );
+
+        svgElement.classList.add("icon");
+        svgIcon.setAttribute("href", `${url}#${iconName}`);
+
+        svgElement.appendChild(svgIcon);
+        element.insertAdjacentElement("afterbegin", svgElement);
+      };
+
+      d.querySelectorAll(".icon-circle").forEach(el => {
+        printIcons(svgIconsUrl, "circle", el);
+      });
+
+      d.querySelectorAll(".icon-diamond").forEach(el => {
+        printIcons(svgIconsUrl, "diamond", el);
+      });
+
+    </script>
+  </body>
+</html>

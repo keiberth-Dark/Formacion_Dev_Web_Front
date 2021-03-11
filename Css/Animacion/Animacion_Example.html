@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Aprendiendo Animaciones CSS</title>
+    <style>
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: red;
+        border: 5px solid #000;
+      }
+      .contain{
+        display: block;
+        position: relative;
+      }
+
+      .circle:first-child {
+        /* animation: circle1 1s infinite alternate; */
+      }
+      
+      @keyframes circle1 {
+        to {
+          width: 300px;
+          height: 300px;
+        }
+      }
+
+      .circle:last-child {
+
+        animation: circle2 1s infinite alternate;
+        background: green;
+      }
+      
+      
+      @keyframes circle2 {
+        to {
+          transform: scale(1.5);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="contain">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,37 @@
+header{
+  background:url('../img/portada.jpg');
+  height:100vh;
+  background-size: cover;
+}
+header h1{
+  font-family: 'Delius Unicase', cursive;
+  color:#e4ab9a;
+}
+header .fondo-blanco{
+  background:rgba(255,255,255,.7);
+}
+h2{
+  font-family: 'Delius Unicase', cursive;
+  background:#e4ab9a;
+  color:#fff;
+}
+.precio{
+  color:#e4ab9a;
+}
+.btnRosa{
+  color:#fff;
+  background:#e4ab9a;
+  border:1px solid #e4ab9a;
+}
+.btnWhats{
+  bottom:20px;
+  right: 20px;
+  width: 70px;
+}
+.whats{
+  color: #e4ab9a;
+}
+.whats:hover{
+  transition: 2s;
+  color: rgba(201, 201, 201, 0.993);
+}
